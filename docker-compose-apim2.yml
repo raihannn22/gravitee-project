@@ -54,6 +54,8 @@
         - gravitee_management_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
         - gravitee_ratelimit_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
         - gravitee_reporters_elasticsearch_endpoints_0=http://elasticsearch:9200
+      volumes:
+        - ./plugins:/opt/graviteeio-gateway/plugins/ext-custom
       networks:
         - storage
         - frontend
@@ -74,6 +76,8 @@
         - gravitee_management_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
         - gravitee_analytics_elasticsearch_endpoints_0=http://elasticsearch:9200
         - gravitee_installation_standalone_portal_url=http://localhost:8085
+      volumes:
+        - ./plugins:/opt/graviteeio-management-api/plugins/ext-custom
       networks:
         - storage
         - frontend
