@@ -61,6 +61,7 @@ public class FooHeaderCheckPolicy {
             public void end() {
                 try {
                     String jsonStr = buffer.toString();
+                    System.out.println("JSON: " + jsonStr);
 
                     // Parse JSON to HelloRequest Protobuf message
                     HelloRequest.Builder builder = HelloRequest.newBuilder();
