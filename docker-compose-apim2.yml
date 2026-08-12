@@ -1,4 +1,4 @@
-  name: gravitee-docker
+  name: gravitee-project
   
   networks:
     frontend:
